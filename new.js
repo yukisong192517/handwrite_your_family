@@ -6,7 +6,7 @@
 function myNew(){
     let obj = {};
     let Con = [...arguments].shift();
-    obj.__proto = Con.prototype;
+    obj.__proto__ = Con.prototype;
     let res = Con.apply(obj,[...arguments].slice(1));
     return res instanceof Object ? res : obj
 }
